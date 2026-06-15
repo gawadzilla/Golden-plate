@@ -450,6 +450,49 @@
       background: none; color: var(--muted);
     }
 
+    /* ── Combo upsell banner ── */
+    .combo-banner {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 24px 0 4px;
+      padding: 18px 22px;
+      background: linear-gradient(135deg, rgba(184,134,62,.10) 0%, rgba(201,168,76,.06) 100%);
+      border: 1px solid rgba(201,168,76,.22);
+      border-radius: var(--r);
+      position: relative;
+      overflow: hidden;
+    }
+    .combo-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(184,134,62,.06), transparent);
+      pointer-events: none;
+    }
+    .combo-icon {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: rgba(201,168,76,.12);
+      border: 1px solid rgba(201,168,76,.25);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      color: var(--gold);
+    }
+    .combo-icon svg { width: 20px; height: 20px; }
+    .combo-title {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gold-lt);
+      margin-bottom: 3px;
+    }
+    .combo-sub {
+      font-size: .78rem;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
     /* ── List row thumbnail ── */
     .list-thumb {
       width: 58px; height: 58px; border-radius: 8px;
@@ -979,6 +1022,19 @@
           </div>
         </article>
       </div>
+
+      <!-- Combo upsell banner -->
+      <div class="combo-banner">
+        <div class="combo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
+          </svg>
+        </div>
+        <div class="combo-text">
+          <div class="combo-title" data-en="Want to make it a combo?" data-ar="تريد تحويله إلى كومبو؟">Want to make it a combo?</div>
+          <div class="combo-sub" data-en="Add fries &amp; a drink — just ask us!" data-ar="أضف بطاطا ومشروب ">Add fries & drink</div>
+        </div>
+      </div>
     </section>
 
     <!-- ═════════ BURGERS ═════════ -->
@@ -1132,7 +1188,22 @@
             <div class="card-price">$13</div>
           </div>
         </article>
-
+<!-- Tawouk plate -->
+        <article class="card">
+          <div class="img-wrap">
+            <img class="card-img" src="images/tawook combo.jpeg" alt="Tawouk" loading="lazy" width="360" height="270">
+          </div>
+          <div class="card-body">
+            <h3 class="card-name" data-en="Tawouk" data-ar="طاووق">Tawouk plate</h3>
+            <p class="card-name-ar ar-sub">صحن طاووق</p>
+            <p class="card-desc"
+               data-en="Marinated chicken skewers — Garlic, Pickles, Potato"
+               data-ar="دجاج متبل على الأسياخ — ثوم، مخلل، بطاطا">
+              Marinated chicken skewers — Garlic, Pickles, Potato
+            </p>
+            <div class="card-price">$8.89</div>
+          </div>
+        </article>
        
       </div>
     </section>
